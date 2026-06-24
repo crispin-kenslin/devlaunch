@@ -18,25 +18,20 @@ From the dashboard you can **Run**, **Stop**, and **Restart** each service indep
 
 ## Setup
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) v18 or newer
-- npm (comes with Node.js)
 
 ### Install & Run
 
-```bash
-# 1. Extract / navigate into the devlaunch folder
-cd devlaunch
-
-# 2. Install dependencies
-npm install
-
-# 3. Launch the app
-npm start
-```
+Install the DevLaunch setup and install it in you windows pc.
 
 ### Build a distributable
+
+Clone the repo and 
+```bash
+
+cd devlaunch
+```
+
+Then
 
 ```bash
 # Windows (.exe installer)
