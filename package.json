@@ -1,6 +1,7 @@
 {
   "name": "devlaunch",
   "version": "1.0.0",
+  "author": "Crispin Joe Kenslin A",
   "description": "Project launcher and process manager by Crispin Joe Kenslin A",
   "main": "src/main.js",
   "scripts": {

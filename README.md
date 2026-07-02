@@ -3,6 +3,8 @@
 **A professional project process manager desktop application.**  
 *by Crispin Joe Kenslin A*
 
+This is an independent open-source project and is not affiliated with any other product or company using the name "DevLaunch".
+
 ---
 
 ## What it does

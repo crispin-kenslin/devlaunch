@@ -26,6 +26,11 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1280, height: 800, minWidth: 900, minHeight: 600,
     frame: false, titleBarStyle: 'hidden', backgroundColor: '#0f1117',
+    
+    // ── ADDED LOGO PROPERTY HERE ──────────────────────────────────────────────
+    // This assigns the app icon to the OS taskbar/dock during development
+    icon: path.join(__dirname, 'assets', 'icons', 'icon.png'),
+    
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true, nodeIntegration: false,
@@ -66,13 +71,10 @@ function spawnService(projectId, service, pythonPath, cwd, command) {
     let cmd, args;
 
     if (pythonPath) {
-      // ── Direct python interpreter mode ──────────────────────────────────
-      // Replace any leading "python" / "python3" / "py" token with the chosen exe
       const normalised = command.trim().replace(/^(python3?|py)\s+/i, '').trim();
       cmd = pythonPath;
       args = normalised.split(/\s+/);
     } else {
-      // ── Plain command, no env activation needed ─────────────────────────
       if (isWin) {
         cmd = 'cmd.exe';
         args = ['/c', command];
